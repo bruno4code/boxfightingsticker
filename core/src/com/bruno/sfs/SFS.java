@@ -1,13 +1,16 @@
 package com.bruno.sfs;
 
-import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.bruno.sfs.resources.Assets;
+import com.bruno.sfs.screens.GameScreen;
 
-public class SFS extends ApplicationAdapter {
+public class SFS extends Game {
     public SpriteBatch batch;
     public Assets assets;
+    // screens
+    public GameScreen gameScreen;
 
     @Override
     public void create() {
@@ -17,13 +20,15 @@ public class SFS extends ApplicationAdapter {
         // load all assets
         assets.load();
         assets.manager.finishLoading();
+
+        // init gameScreen
+        gameScreen = new GameScreen(this);
+        setScreen(gameScreen);
     }
 
     @Override
     public void render() {
-        ScreenUtils.clear(1, 0, 0, 1);
-        batch.begin();
-        batch.end();
+        super.render();
     }
 
     @Override

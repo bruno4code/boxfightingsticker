@@ -2,13 +2,13 @@ package com.bruno.sfs;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.utils.ScreenUtils;
 import com.bruno.sfs.resources.Assets;
 import com.bruno.sfs.screens.GameScreen;
 
 public class SFS extends Game {
     public SpriteBatch batch;
     public Assets assets;
+
     // screens
     public GameScreen gameScreen;
 

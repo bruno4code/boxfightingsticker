@@ -47,6 +47,7 @@ public class Assets {
         loadGamePlayAssets();
     }
 
+    // metodo para carregar todos os assets criados acima
     private void loadGamePlayAssets() {
         manager.load(BACKGROUND_TEXTURE, Texture.class);
         manager.load(FRONT_ROPES_TEXTURE, Texture.class);
